@@ -12,11 +12,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: 'landing',
       component: Home,
       children: [
         {
-          path: 'landing',
+          path: '/',
           name: 'landing',
           // route level code-splitting
           // this generates a separate chunk (about.[hash].js) for this route
@@ -54,7 +53,7 @@ export default new Router({
         {
           path: '/magiclink/:token/verify',
           name: 'magiclinkverification',
-          component: () => import(/* webpackChunkName: "demo" */ '../views/MagicLinkVerification.vue')
+          component: () => import(/* webpackChunkName: "demo" */ '../views/MagicLinkVerification.vue'),
         },
       ],
     },
@@ -73,8 +72,8 @@ export default new Router({
           beforeEnter: Auth.authCheck,
           meta: {
             is_db_view: true,
-            active_class: '#dashboard_home'
-          }
+            active_class: '#dashboard_home',
+          },
         },
         {
           path: '/dashboard/requests/:id',
@@ -86,8 +85,8 @@ export default new Router({
           beforeEnter: Auth.authCheck,
           meta: {
             is_db_view: true,
-            active_class: '#dashboard_home'
-          }
+            active_class: '#dashboard_home',
+          },
         },
         {
           path: '/dashboard/profile',
@@ -99,8 +98,8 @@ export default new Router({
           beforeEnter: Auth.authCheck,
           meta: {
             is_db_view: true,
-            active_class: '#dashboard_profile'
-          }
+            active_class: '#dashboard_profile',
+          },
         },
         {
           path: '/dashboard/settings',
@@ -112,8 +111,8 @@ export default new Router({
           beforeEnter: Auth.authCheck,
           meta: {
             is_db_view: true,
-            active_class: '#dashboard_settings'
-          }
+            active_class: '#dashboard_settings',
+          },
         },
         {
           path: '/dashboard/playground',
@@ -125,8 +124,8 @@ export default new Router({
           beforeEnter: Auth.authCheck,
           meta: {
             is_db_view: true,
-            active_class: '#dashboard_settings'
-          }
+            active_class: '#dashboard_settings',
+          },
         },
       ],
     },
