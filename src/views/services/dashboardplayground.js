@@ -17,7 +17,7 @@ export default {
     const ui = SwaggerUI({
       dom_id: "#myDomId",
       //spec: SwaggerSpec,https://obsandbox.herokuapp.com/swagger.json
-      url: "https://obsandbox.herokuapp.com/swagger.json",
+      url: "https://sandbox.openbanking.ng/api/v1/swagger.json",
       presets: [SwaggerUI.presets.apis, SwaggerUI.SwaggerUIStandalonePreset],
       deepLinking: false,
       lasyout: "StandaloneLayout",
