@@ -7,7 +7,7 @@ export default {
       apiuser: {},
       requests: [],
       loading: false,
-    }
+    };
   },
   methods: {
     fdt(ct) {
@@ -18,41 +18,41 @@ export default {
     },
     loadRequests() {
       const self = this;
-      self.$http.getLite(`v1/dashboard/self`)
-      .then(response => {
-      const rd = response.data;
+      self.$http.getLite('api/v1/dashboard/self')
+        .then((response) => {
+          const rd = response.data;
           if (rd.data) {
-              self.apiuser = rd.data;
+            self.apiuser = rd.data;
           }
-      })
-      .catch(error => {
-      const error_response = error.response;
-      self.$swal('Oops', (error_response && error_response.data && error_response.data.message ) || error.message, 'error');
-      })
+        })
+        .catch((error) => {
+          const error_response = error.response;
+          self.$swal('Oops', (error_response && error_response.data && error_response.data.message) || error.message, 'error');
+        });
     },
     update() {
       const self = this;
       self.loading = true;
-      self.$http.postLite(`v1/dashboard/edit_profile`, self.apiuser)
-      .then(response => {
-      const rd = response.data;
+      self.$http.postLite('api/v1/dashboard/edit_profile', self.apiuser)
+        .then((response) => {
+          const rd = response.data;
           if (rd.data) {
-              //self.apiuser = rd.data;
-              self.$swal.fire(
-                'Done',
-                'Profile update successful',
-                'success'
-              );
-              self.loadRequests();
+            // self.apiuser = rd.data;
+            self.$swal.fire(
+              'Done',
+              'Profile update successful',
+              'success',
+            );
+            self.loadRequests();
           }
-      })
-      .catch(error => {
-      const error_response = error.response;
-      self.$swal('Oops', (error_response && error_response.data && error_response.data.message ) || error.message, 'error');
-      })
-      .finally( () => {
-        self.loading = false;
-      })
+        })
+        .catch((error) => {
+          const error_response = error.response;
+          self.$swal('Oops', (error_response && error_response.data && error_response.data.message) || error.message, 'error');
+        })
+        .finally(() => {
+          self.loading = false;
+        });
     },
   },
   created() {
