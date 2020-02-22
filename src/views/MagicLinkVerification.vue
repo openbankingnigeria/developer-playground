@@ -1,7 +1,7 @@
 <template>
   <section class="mailconfirmation">
       <div class="confirmationillustration">
-        <img src="https://openbanking.ng/wp-content/uploads/2019/10/il1.svg" alt="">
+        <img src="https://openbanking.ng/wp-content/uploads/2020/02/il1.svg" alt="">
       </div>
       <div class="cta-caption">
           Verifying your magic link token

@@ -3,7 +3,7 @@
     <section class="above-the-fold-mast">
       <section class="header p50 clearfix">
         <div class="header-brand fleft">
-          <a href="https://openbanking.ng" target="_blank"><img src="https://openbanking.ng/wp-content/uploads/2019/10/log1.svg" alt=""></a>
+          <a href="https://openbanking.ng" target="_blank"><img src="https://openbanking.ng/wp-content/uploads/2020/02/log1.svg" alt=""></a>
         </div>
         <div class="header-nav fright">
           <section class="menu">

@@ -3,7 +3,7 @@
      <section class="page-sidebar sidebardashboard appblue mh100">
       <div class="sidebarcontentdashboard">
           <div class="appbrand dbmod">
-              <a href="https://openbanking.ng" target="_blank"><img src="https://openbanking.ng/wp-content/uploads/2019/10/log2.svg" alt=""></a>
+              <a href="https://openbanking.ng" target="_blank"><img src="https://openbanking.ng/wp-content/uploads/2020/02/log2.svg" alt=""></a>
           </div>
           <div class="sidebarmenu"> 
             <div class="sidebarmenu-item active clearfix" id="dashboard_home">

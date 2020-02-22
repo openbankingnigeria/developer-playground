@@ -3,7 +3,7 @@
     <section class="page-sidebar sidebardefault sbg sbgwhite mh100">
       <div class="sidebarcontent">
           <div class="appbrand">
-              <a href="https://openbanking.ng" target="_blank"><img src="https://openbanking.ng/wp-content/uploads/2019/10/log3.svg" alt=""></a>
+              <a href="https://openbanking.ng" target="_blank"><img src="https://openbanking.ng/wp-content/uploads/2020/02/log3.svg" alt=""></a>
           </div>
           <div class="sidebarcaption black">
               We are building a common standard for Open Banking API’s in Nigeria
