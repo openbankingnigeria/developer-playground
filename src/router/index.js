@@ -21,7 +21,7 @@ export default new Router({
           // this generates a separate chunk (about.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
           component: () => import(/* webpackChunkName: "demo" */ '../views/Landing.vue'),
-          beforeEnter: Auth.authIsLoggedIn,
+          beforeEnter: Auth.authIsLoggedIn
         },
         {
           path: 'register',
@@ -30,7 +30,7 @@ export default new Router({
           // this generates a separate chunk (about.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
           component: () => import(/* webpackChunkName: "demo" */ '../views/Register.vue'),
-          beforeEnter: Auth.authIsLoggedIn,
+          beforeEnter: Auth.authIsLoggedIn
         },
         {
           path: 'login',
@@ -39,7 +39,7 @@ export default new Router({
           // this generates a separate chunk (about.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
           component: () => import(/* webpackChunkName: "demo" */ '../views/Login.vue'),
-          beforeEnter: Auth.authIsLoggedIn,
+          beforeEnter: Auth.authIsLoggedIn
         },
         {
           path: 'confirmation',
@@ -48,14 +48,14 @@ export default new Router({
           // this generates a separate chunk (about.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
           component: () => import(/* webpackChunkName: "demo" */ '../views/Confirmation.vue'),
-          beforeEnter: Auth.authIsLoggedIn,
+          beforeEnter: Auth.authIsLoggedIn
         },
         {
           path: '/magiclink/:token/verify',
           name: 'magiclinkverification',
-          component: () => import(/* webpackChunkName: "demo" */ '../views/MagicLinkVerification.vue'),
-        },
-      ],
+          component: () => import(/* webpackChunkName: "demo" */ '../views/MagicLinkVerification.vue')
+        }
+      ]
     },
     {
       path: '/dashboard',
@@ -72,8 +72,8 @@ export default new Router({
           beforeEnter: Auth.authCheck,
           meta: {
             is_db_view: true,
-            active_class: '#dashboard_home',
-          },
+            active_class: '#dashboard_home'
+          }
         },
         {
           path: '/dashboard/requests/:id',
@@ -85,8 +85,8 @@ export default new Router({
           beforeEnter: Auth.authCheck,
           meta: {
             is_db_view: true,
-            active_class: '#dashboard_home',
-          },
+            active_class: '#dashboard_home'
+          }
         },
         {
           path: '/dashboard/profile',
@@ -98,8 +98,8 @@ export default new Router({
           beforeEnter: Auth.authCheck,
           meta: {
             is_db_view: true,
-            active_class: '#dashboard_profile',
-          },
+            active_class: '#dashboard_profile'
+          }
         },
         {
           path: '/dashboard/settings',
@@ -111,8 +111,8 @@ export default new Router({
           beforeEnter: Auth.authCheck,
           meta: {
             is_db_view: true,
-            active_class: '#dashboard_settings',
-          },
+            active_class: '#dashboard_settings'
+          }
         },
         {
           path: '/dashboard/playground',
@@ -124,10 +124,14 @@ export default new Router({
           beforeEnter: Auth.authCheck,
           meta: {
             is_db_view: true,
-            active_class: '#dashboard_settings',
-          },
-        },
-      ],
+            active_class: '#dashboard_settings'
+          }
+        }
+      ]
     },
-  ],
+    {
+      path: '*',
+      component: () => import(/* webpackChunkName: "demo" */ '../views/Landing.vue'),
+    }
+  ]
 });

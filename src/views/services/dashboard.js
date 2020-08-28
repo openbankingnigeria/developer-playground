@@ -3,7 +3,7 @@ export default {
   methods: {
     logout() {
       window.localStorage.removeItem('auth');
-      this.$router.push('/landing');
+      this.$router.push('/');
     }
   }
 };
